@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+  --cream: #f7f2e9;
+  --paper: #fffdf8;
+  --ink: #30271f;
+  --muted: #776c60;
+  --brown: #684936;
+  --brown-dark: #493326;
+  --green: #66785d;
+  --green-dark: #465b43;
+  --line: #e7ded1;
+  --shadow: 0 18px 55px rgba(55, 39, 27, .10);
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'DM Sans', Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+button, input, textarea, select { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+img { display: block; max-width: 100%; }
+::selection { background: #d8dfd0; color: var(--brown-dark); }
+.container { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
+.eyebrow { color: var(--green-dark); font-size: .73rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+.section-heading { max-width: 650px; margin: 0 auto 42px; text-align: center; }
+.section-heading h2 { margin: 12px 0; font: 600 clamp(2rem, 4vw, 3.15rem)/1.12 var(--serif); }
+.section-heading p { color: var(--muted); line-height: 1.8; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 48px; padding: 0 23px; border: 1px solid transparent; border-radius: 4px;
+  background: var(--brown); color: white; font-weight: 700; font-size: .88rem;
+  cursor: pointer; transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+}
+.btn:hover { transform: translateY(-2px); background: var(--brown-dark); box-shadow: 0 10px 22px #49332625; }
+.btn--light { background: var(--paper); color: var(--brown-dark); }
+.btn--light:hover { background: white; }
+.btn--outline { background: transparent; color: var(--brown-dark); border-color: #b9a995; }
+.btn--outline:hover { background: var(--brown); color: white; }
+.page-hero { padding: 92px 0 78px; text-align: center; background: #eee5d8; }
+.page-hero h1 { margin: 13px 0; font: 600 clamp(2.7rem, 6vw, 4.7rem)/1.05 var(--serif); }
+.page-hero p { max-width: 600px; margin: 0 auto; color: var(--muted); line-height: 1.8; }
+:focus-visible { outline: 3px solid #9ba98e; outline-offset: 3px; }
+@media (max-width: 640px) {
+  .container { width: min(100% - 32px, 1160px); }
+  .page-hero { padding: 70px 0 58px; }
+}

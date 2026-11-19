@@ -1,0 +1,10 @@
+export const menuItems = [
+  { id: 1, name: "Brown Butter Pancakes", category: "Breakfast", price: 280, tag: "Guest favourite", description: "Fluffy stacks, seasonal fruit and maple butter.", image: "https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=900&q=85", alt: "Pancakes topped with fruit and syrup" },
+  { id: 2, name: "Garden Avocado Toast", category: "Breakfast", price: 260, description: "Sourdough, smashed avocado, herbs and chilli oil.", image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=900&q=85", alt: "Avocado toast on a plate" },
+  { id: 3, name: "The Daily Cappuccino", category: "Coffee", price: 160, tag: "House classic", description: "A double espresso softened with silky milk.", image: "https://images.unsplash.com/photo-1534778101976-62853249b6c1?w=900&q=85", alt: "Cappuccino with latte art" },
+  { id: 4, name: "Iced Vanilla Latte", category: "Coffee", price: 190, description: "Chilled espresso, milk and house vanilla.", image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=900&q=85", alt: "Iced latte in a glass" },
+  { id: 5, name: "Roasted Tomato Pasta", category: "Lunch", price: 340, description: "Slow-roasted tomatoes, basil and parmesan.", image: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=900&q=85", alt: "Fresh pasta with tomato sauce" },
+  { id: 6, name: "Mushroom Melt", category: "Lunch", price: 310, description: "Grilled sourdough, mushrooms and aged cheese.", image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=900&q=85", alt: "Grilled sandwich cut in half" },
+  { id: 7, name: "Chocolate Fudge Slice", category: "Dessert", price: 210, tag: "Baked in-house", description: "Deep cocoa, soft centre and a little sea salt.", image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=900&q=85", alt: "Rich chocolate cake slice" },
+  { id: 8, name: "Lemon Olive Oil Cake", category: "Dessert", price: 190, description: "Bright lemon, tender crumb and whipped cream.", image: "https://images.unsplash.com/photo-1519869325930-281384150729?w=900&q=85", alt: "Slice of lemon cake" }
+];

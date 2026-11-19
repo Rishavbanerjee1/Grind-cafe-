@@ -1,0 +1,9 @@
+.menuSection { padding-top: 65px; padding-bottom: 100px; }
+.filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 9px; }
+.filters button { border: 1px solid #cfc2b2; padding: 11px 20px; background: transparent; color: var(--brown); cursor: pointer; border-radius: 30px; font-size: .82rem; font-weight: 700; transition: .2s; }
+.filters button:hover, .filters button.active { border-color: var(--green); background: var(--green); color: white; }
+.count { margin: 35px 0 16px; color: var(--muted); font-size: .8rem; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.disclaimer { margin-top: 35px; text-align: center; color: var(--muted); font-size: .78rem; }
+@media(max-width: 850px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media(max-width: 600px) { .menuSection { padding-top: 45px; padding-bottom: 70px; } .grid { grid-template-columns: 1fr; } .filters { justify-content: flex-start; } }
