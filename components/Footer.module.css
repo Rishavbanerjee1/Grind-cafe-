@@ -1,13 +1,1 @@
-.footer { background: #3e332b; color: #f7f2e9; padding: 70px 0 22px; }
-.top { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.25fr; gap: 42px; padding-bottom: 55px; }
-.logo { display: grid; place-items: center; width: 43px; height: 43px; border: 1px solid #b8a48e; border-radius: 50%; font: 700 1.2rem var(--serif); }
-.brandBlock h2 { margin: 20px 0 12px; font: 600 2rem/1.1 var(--serif); }
-.brandBlock h2 em { color: #c7d0bd; }
-.brandBlock p, .top p { color: #c7bdb2; font-size: .88rem; line-height: 1.8; }
-.top h3 { margin: 7px 0 20px; color: #d5c7b5; font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; }
-.top a { display: block; margin: 0 0 13px; color: #f4eee5; font-size: .88rem; }
-.top a:hover { color: #c7d0bd; }
-.social { margin-top: 20px; }
-.bottom { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid #65574c; padding-top: 20px; color: #bdb1a5; font-size: .74rem; }
-@media(max-width: 800px) { .top { grid-template-columns: 1fr 1fr; } }
-@media(max-width: 520px) { .top { grid-template-columns: 1fr; gap: 26px; } .bottom { flex-direction: column; } }
+.footer{background:#3f342c;color:#f7f2e9;padding:62px 0 20px}.top{display:grid;grid-template-columns:1.55fr 1fr 1fr 1.2fr;gap:38px;padding-bottom:44px}.logo{display:grid;place-items:center;width:40px;height:40px;border:1px solid #b8a48e;border-radius:50%;font:400 1.15rem var(--serif)}.brandBlock h2{margin:18px 0 10px;font:400 1.9rem/1.12 var(--serif)}.brandBlock h2 em{color:#c7d0bd}.brandBlock p,.top p{color:#c7bdb2;font-size:.84rem;line-height:1.8}.top h3{margin:6px 0 17px;color:#d5c7b5;font-size:.68rem;letter-spacing:.13em;text-transform:uppercase}.top a{display:block;margin:0 0 12px;color:#f4eee5;font-size:.84rem}.top a:hover{color:#c7d0bd}.social{margin-top:17px}.bottom{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #65574c;padding-top:18px;color:#bdb1a5;font-size:.7rem}@media(max-width:800px){.top{grid-template-columns:1fr 1fr}}@media(max-width:520px){.top{grid-template-columns:1fr;gap:23px}.bottom{flex-direction:column}}

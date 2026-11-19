@@ -1,13 +1,1 @@
-.story { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 75px; padding-top: 100px; padding-bottom: 105px; }
-.photo img { width: 100%; height: 520px; object-fit: cover; }
-.copy h2, .promise h2 { margin: 14px 0 20px; font: 600 clamp(2.5rem, 4vw, 3.8rem)/1.08 var(--serif); letter-spacing: -.04em; }
-.copy h2 em, .promise h2 em { color: var(--green); }
-.copy p { color: var(--muted); line-height: 1.9; }
-.copy .btn { margin-top: 14px; }
-.promise { padding: 95px 0; background: #eee6da; text-align: center; }
-.promiseGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 45px; margin-top: 55px; text-align: left; }
-.promiseGrid article { border-top: 1px solid #cfc2b2; padding-top: 20px; }
-.promiseGrid b { color: var(--green); font-size: .75rem; }
-.promiseGrid h3 { font: 600 1.35rem var(--serif); }
-.promiseGrid p { color: var(--muted); font-size: .9rem; line-height: 1.8; }
-@media(max-width: 700px) { .story { grid-template-columns: 1fr; gap: 35px; padding-top: 60px; padding-bottom: 65px; } .photo img { height: 330px; } .promiseGrid { grid-template-columns: 1fr; gap: 25px; margin-top: 35px; } }
+.story{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:72px;padding-top:82px;padding-bottom:88px}.photo img{width:100%;height:490px;object-fit:cover;border-radius:3px}.copy h2,.promise h2{margin:13px 0 18px;font:400 clamp(2.4rem,4vw,3.7rem)/1.08 var(--serif);letter-spacing:-.025em}.copy h2 em,.promise h2 em{color:var(--green);font-weight:400}.copy p{color:var(--muted);line-height:1.85;font-size:.94rem}.copy .btn{margin-top:12px}.promise{padding:82px 0;background:#f3eee5;text-align:center}.promiseGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:48px;text-align:left}.promiseGrid article{border-top:1px solid #d9d0c4;padding-top:17px}.promiseGrid b{color:var(--green);font-size:.72rem}.promiseGrid h3{font:400 1.3rem var(--serif)}.promiseGrid p{color:var(--muted);font-size:.87rem;line-height:1.8}@media(max-width:700px){.story{grid-template-columns:1fr;gap:32px;padding-top:54px;padding-bottom:62px}.photo img{height:320px}.promiseGrid{grid-template-columns:1fr;gap:22px;margin-top:34px}}
