@@ -1,24 +1,25 @@
-"use client";
-import { useMemo, useState } from "react";
-import MenuCard from "@/components/MenuCard";
-import { menuItems } from "@/data/menu";
-import styles from "./menu.module.css";
+import MenuBrowser from "@/components/MenuBrowser";
+import styles from "./page.module.css";
+
+export const metadata = {
+  title: "The Menu",
+  description: "Explore coffee, fresh bakes and comforting café favourites at The Daily Grind."
+};
 
 export default function MenuPage() {
-  const categories = ["All", "Breakfast", "Coffee", "Lunch", "Dessert"];
-  const [active, setActive] = useState("All");
-  const visibleItems = useMemo(() => active === "All" ? menuItems : menuItems.filter(item => item.category === active), [active]);
   return (
-    <>
-      <section className="page-hero"><div className="container"><span className="eyebrow">Fresh from our kitchen</span><h1>A menu for every mood.</h1><p>From the first coffee of the day to the little something you didn’t know you needed.</p></div></section>
-      <section className={`container ${styles.menuSection}`}>
-        <div className={styles.filters} aria-label="Filter menu by category">
-          {categories.map(category => <button key={category} className={active === category ? styles.active : ""} onClick={() => setActive(category)} aria-pressed={active === category}>{category}</button>)}
+    <div className={styles.page}>
+      <section className={styles.heading}>
+        <div className="container">
+          <p className="eyebrow">Something good is on the table</p>
+          <h1>A menu for<br /><em>your kind of day.</em></h1>
+          <p>From the first coffee to the last little bite, find something you’ll look forward to.</p>
         </div>
-        <p className={styles.count}>Showing {visibleItems.length} {visibleItems.length === 1 ? "item" : "items"}</p>
-        <div className={styles.grid}>{visibleItems.map(item => <MenuCard key={item.id} item={item}/>)}</div>
-        <p className={styles.disclaimer}>Menu and prices are sample content for this demonstration and may be updated by the café.</p>
       </section>
-    </>
+      <section className={`container ${styles.menuSection}`}>
+        <div className={styles.menuIntro}><h2>Made with care.<br /><em>Enjoyed your way.</em></h2><p>Take a look around. There’s always a good reason to stay for one more.</p></div>
+        <MenuBrowser />
+      </section>
+    </div>
   );
 }

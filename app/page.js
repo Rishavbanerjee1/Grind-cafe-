@@ -1,60 +1,84 @@
 import Link from "next/link";
-import MenuCard from "@/components/MenuCard";
-import { menuItems } from "@/data/menu";
 import styles from "./home.module.css";
 
 export const metadata = {
-  title: "Good Coffee, Made with Care",
-  description: "Visit The Daily Grind for carefully prepared coffee, a relaxed neighbourhood atmosphere and a menu made for everyday visits."
+  title: "Good Coffee, Good Company",
+  description: "Drop by The Daily Grind for carefully made coffee, fresh bakes and unhurried moments in Kolkata."
 };
 
 export default function HomePage() {
-  const favourites = menuItems.filter(item => [1, 3, 5].includes(item.id));
   return (
     <>
       <section className={styles.hero}>
         <div className={`container ${styles.heroGrid}`}>
           <div className={styles.heroCopy}>
-            <span className="eyebrow">Your neighbourhood coffee stop</span>
-            <h1>Good coffee.<br/><em>Good company.</em></h1>
-            <p>Come by for your morning coffee, a fresh bite or an easy catch-up. We’ll have something good on the table.</p>
-            <div className={styles.actions}><Link className="btn" href="/menu">View the menu <span>↗</span></Link><Link className="btn btn--outline" href="/contact">Visit the café</Link></div>
-            <div className={styles.note}><span className={styles.noteLine}></span><span>Made fresh. Served with care.</span></div>
+            <p className="eyebrow">Your neighbourhood coffee stop</p>
+            <h1>Good coffee.<br /><em>Good company.</em></h1>
+            <p className={styles.intro}>
+              Come by for your morning coffee, a fresh bite or an easy catch-up.
+              We’ll have something good on the table.
+            </p>
+            <div className={styles.actions}>
+              <Link className="button buttonPrimary" href="/menu">View the menu <span aria-hidden="true">↗</span></Link>
+              <Link className="button buttonOutline" href="/contact">Visit the café</Link>
+            </div>
+            <div className={styles.freshNote}><span /> Made fresh. Served with care.</div>
           </div>
+
           <div className={styles.heroVisual}>
-            <img className={styles.heroImage} src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1400&q=90" alt="Daylit café interior with wooden tables and coffee bar" fetchPriority="high"/>
-            <span className={styles.imageCaption}>A good place to take a break.</span>
+            <div className={styles.imageFrame}>
+              <img
+                src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1500&q=88"
+                alt="A warm, plant-filled café with a welcoming coffee table"
+                className={styles.heroImage}
+              />
+              <span className={styles.imageCaption}>A good place to take a break.</span>
+            </div>
+            <div className={styles.loveStamp} aria-label="Brewed with love">
+              <span className={styles.stampHeart} aria-hidden="true">♥</span>
+              <span className={styles.stampText}>Brewed with<br /><strong>love</strong></span>
+            </div>
           </div>
         </div>
-        <div className={styles.heroBottom}><span>COFFEE, BREAKFAST & MORE</span><span>MADE FOR EVERYDAY VISITS</span><span>OPEN DAILY · 8 AM–9 PM</span></div>
       </section>
 
-      <section className={styles.intro}>
-        <div className="container">
-          <div className="section-heading"><span className="eyebrow">What you’ll find here</span><h2>A café that keeps things <em>simple.</em></h2><p>Good ingredients, a thoughtful cup of coffee and a comfortable place to spend a little time.</p></div>
-          <div className={styles.values}>
-            <article><span>01</span><h3>Coffee, done properly</h3><p>Espresso, cold coffee and familiar favourites, prepared carefully and served just how you like them.</p></article>
-            <article><span>02</span><h3>Something to eat</h3><p>Breakfast plates, sandwiches and a few sweet things for when coffee needs company.</p></article>
-            <article><span>03</span><h3>Room to settle in</h3><p>Stop in on your own, meet someone or take a little time out of a busy day.</p></article>
+      <section className={styles.introSection}>
+        <div className={`container ${styles.introGrid}`}>
+          <p className="eyebrow">A little about us</p>
+          <div>
+            <h2>Good things happen<br /><em>around a table.</em></h2>
+            <p>We believe a café should feel like a familiar pause in a busy day. Thoughtful coffee, honest food and a seat that’s always worth taking.</p>
+            <Link className="textLink" href="/about">Get to know us <span aria-hidden="true">↗</span></Link>
           </div>
         </div>
       </section>
 
-      <section className={styles.favourites}>
-        <div className="container">
-          <div className={styles.sectionTop}><div><span className="eyebrow">From the menu</span><h2>House <em>favourites.</em></h2></div><Link className="btn btn--outline" href="/menu">Browse everything ↗</Link></div>
-          <div className={styles.menuGrid}>{favourites.map(item => <MenuCard key={item.id} item={item}/>)}</div>
+      <section className={styles.featured}>
+        <div className={`container ${styles.sectionHead}`}>
+          <div><p className="eyebrow">A few favourites</p><h2>Made to be <em>enjoyed.</em></h2></div>
+          <Link className="textLink" href="/menu">Explore the menu <span aria-hidden="true">↗</span></Link>
+        </div>
+        <div className={`container ${styles.featureGrid}`}>
+          <article className={styles.featureCard}>
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=85" alt="Freshly prepared iced coffee" />
+            <div><span>01 / Coffee</span><h3>The everyday favourite</h3><p>Comfort in a cup, made just the way you like it.</p></div>
+          </article>
+          <article className={styles.featureCard}>
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=85" alt="Freshly baked bread and pastries" />
+            <div><span>02 / From the oven</span><h3>A little something sweet</h3><p>Fresh bakes for slow mornings and afternoon breaks.</p></div>
+          </article>
+          <article className={styles.featureCard}>
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85" alt="Coffee being poured into a ceramic cup" />
+            <div><span>03 / The ritual</span><h3>Take your time</h3><p>Good coffee is better when there’s nowhere to rush.</p></div>
+          </article>
         </div>
       </section>
 
-      <section className={styles.quote}>
-        <div className="container"><span className="eyebrow">A note from the café</span><p>“Take your time. Your coffee isn’t going anywhere.”</p><span className={styles.quoteBy}>THE DAILY GRIND</span></div>
-      </section>
-
-      <section className={styles.visit}>
-        <div className={`container ${styles.visitGrid}`}>
-          <div><span className="eyebrow">Find us</span><h2>Your usual table<br/><em>is waiting.</em></h2><p>Check our opening hours, find the café and get in touch before you visit.</p><Link className="btn" href="/contact">Plan your visit ↗</Link></div>
-          <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1200&q=85" alt="Barista preparing coffee at the café counter" loading="lazy"/>
+      <section className={styles.visitBand}>
+        <div className="container">
+          <p className="eyebrow">Your table is waiting</p>
+          <h2>Make a little room<br /><em>for good moments.</em></h2>
+          <Link className="button buttonLight" href="/contact">Find your way here <span aria-hidden="true">↗</span></Link>
         </div>
       </section>
     </>

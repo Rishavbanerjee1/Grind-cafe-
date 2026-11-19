@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  poweredByHeader: false,
-  compress: true
+  poweredByHeader: false
 };
 
 export default nextConfig;

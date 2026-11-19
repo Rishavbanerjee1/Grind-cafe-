@@ -1,1 +1,18 @@
-.footer{background:#3f342c;color:#f7f2e9;padding:62px 0 20px}.top{display:grid;grid-template-columns:1.55fr 1fr 1fr 1.2fr;gap:38px;padding-bottom:44px}.logo{display:grid;place-items:center;width:40px;height:40px;border:1px solid #b8a48e;border-radius:50%;font:400 1.15rem var(--serif)}.brandBlock h2{margin:18px 0 10px;font:400 1.9rem/1.12 var(--serif)}.brandBlock h2 em{color:#c7d0bd}.brandBlock p,.top p{color:#c7bdb2;font-size:.84rem;line-height:1.8}.top h3{margin:6px 0 17px;color:#d5c7b5;font-size:.68rem;letter-spacing:.13em;text-transform:uppercase}.top a{display:block;margin:0 0 12px;color:#f4eee5;font-size:.84rem}.top a:hover{color:#c7d0bd}.social{margin-top:17px}.bottom{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #65574c;padding-top:18px;color:#bdb1a5;font-size:.7rem}@media(max-width:800px){.top{grid-template-columns:1fr 1fr}}@media(max-width:520px){.top{grid-template-columns:1fr;gap:23px}.bottom{flex-direction:column}}
+.footer { background: #28251f; color: #f7f2e9; padding: 4.5rem 0 1.5rem; }
+.top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 2.5rem; padding-bottom: 3.5rem; }
+.logo { width: 42px; height: 42px; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; display: grid; place-items: center; font: 600 1rem var(--serif); }
+.brandBlock h2 { font: 500 2.2rem/1.02 var(--serif); letter-spacing: -.035em; margin: 1.1rem 0 .8rem; }
+.brandBlock h2 em { color: #c6cfba; }
+.brandBlock p, .column p { color: #c5beb2; font-size: .85rem; line-height: 1.7; max-width: 270px; }
+.column { display: flex; flex-direction: column; align-items: start; gap: .75rem; }
+.column h3 { font-size: .76rem; text-transform: uppercase; letter-spacing: .14em; margin: .2rem 0 .6rem; color: #d7d0c4; }
+.column a { color: #f7f2e9; font-size: .85rem; }
+.column a:hover { color: #c6cfba; }
+.column p { margin: 0 0 .4rem; }
+.social { margin-top: .3rem !important; }
+.bottom { border-top: 1px solid rgba(255,255,255,.18); padding-top: 1.3rem; display: flex; justify-content: space-between; gap: 1rem; color: #c5beb2; font-size: .75rem; }
+.loveNote { display: inline-flex; align-items: center; gap: .45rem; }
+.heart { color: #d99a86; font-size: .9rem; transition: transform .25s ease; }
+.loveNote:hover .heart { transform: scale(1.2); }
+@media(max-width:850px) { .top { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:520px) { .top { grid-template-columns: 1fr 1fr; gap: 2rem 1rem; } .brandBlock { grid-column: 1/-1; } .bottom { flex-direction: column; } }

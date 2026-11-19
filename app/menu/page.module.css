@@ -1,0 +1,10 @@
+.page { background: var(--paper); }
+.heading { padding: 6rem 0 4.5rem; background: var(--cream); }
+.heading h1 { font: 500 clamp(3.2rem, 6.5vw, 6rem)/.98 var(--serif); letter-spacing: -.05em; margin: 1.5rem 0; }
+.heading h1 em, .menuIntro h2 em { color: var(--sage); }
+.heading p:last-child { max-width: 550px; color: var(--muted); line-height: 1.8; }
+.menuSection { padding-top: 5rem; padding-bottom: 6rem; }
+.menuIntro { display: flex; align-items: end; justify-content: space-between; gap: 2rem; }
+.menuIntro h2 { font: 500 clamp(2.5rem, 4vw, 3.8rem)/1 var(--serif); letter-spacing: -.04em; margin: 0; }
+.menuIntro p { max-width: 300px; color: var(--muted); line-height: 1.7; }
+@media(max-width:650px) { .menuIntro { display: block; } }
